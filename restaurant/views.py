@@ -11,12 +11,10 @@ def index(request):
 class MenuItemView(ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
-    permission_classes = [IsAuthenticated]
 
 class SingleMenuItemView(RetrieveUpdateDestroyAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
-    permission_classes = [IsAuthenticated]
 
 class BookingView(ListCreateAPIView):
     queryset = Booking.objects.all()
